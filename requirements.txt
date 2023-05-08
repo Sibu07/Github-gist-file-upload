@@ -25,7 +25,7 @@ pymongo==4.3.3
 pyngrok==6.0.0
 pypng==0.20220715.0
 PyQRCode==1.2.1
-python-dotenv==1.0.0
+python-dotenv==0.21.1
 pytz==2023.3
 PyYAML==6.0
 qrcode==7.4.2
