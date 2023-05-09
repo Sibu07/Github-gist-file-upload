@@ -43,13 +43,10 @@ def upload():
 
     # Check if file has an allowed extension
     file_extension = file.filename.rsplit(".", 1)[1].lower()
-    if file_extension not in allowed_extensions:
-        error_message = f"File extension '{file_extension}' is not allowed. Allowed extensions are: {', '.join(allowed_extensions)}."
-        return render_template("error.html", error_message=error_message)
 
     # Check if file is not allowed extension
     if file_extension in notallowed_extensions:
-        error_message = f"File extension '{file_extension}' is not allowed. Allowed extensions are: {', '.join(allowed_extensions)}."
+        error_message = f"File extension '{file_extension}' is not allowed \n\nDon't use this extensions: {', '.join(notallowed_extensions)}."
         return render_template("error.html", error_message=error_message)
 
     # Set headers
